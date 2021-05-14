@@ -183,12 +183,20 @@ h6 {
   bottom: 0;
   max-width: 694px;
   background-color: #fff;
-  width: 100%;
+  width: 200%;
   z-index: 5;
+  padding-top: 40px;
+  -webkit-box-shadow: -2px 3px 17px #000;
+          box-shadow: -2px 3px 17px #000;
+  -webkit-transition: all .6s;
+  -o-transition: all .6s;
+  transition: all .6s;
 }
 
 .rightside__menu.hidden {
-  display: none;
+  -webkit-transform: translate(500%);
+      -ms-transform: translate(500%);
+          transform: translate(500%);
 }
 
 .rightside__menu-close {
@@ -197,14 +205,7 @@ h6 {
   padding: 0;
   cursor: pointer;
   margin-left: 50px;
-  padding-top: 40px;
-  margin-bottom: 60px;
-}
-
-.rightside__menu-content {
-  text-align: center;
-  max-width: 485px;
-  margin: 0 auto;
+  margin-bottom: 15px;
 }
 
 .rightside__menu-content {
@@ -223,14 +224,240 @@ h6 {
   font-size: 36px;
   line-height: 51px;
   color: #363838;
+  position: relative;
+  margin-bottom: 17px;
+  padding-bottom: 17px;
+}
+
+.rightside__menu-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 50%;
+  height: 1px;
+  margin: 0 auto;
+  background-color: #000;
 }
 
 .rightside__menu-text {
-  margin-bottom: 75px;
+  margin-bottom: 40px;
 }
 
 .rightside__menu-image {
-  max-width: 485px;
+  max-width: 480px;
+  max-height: 375px;
+}
+
+.main .top__inner {
+  padding-bottom: 70px;
+  position: relative;
+}
+
+.main .top__inner::after {
+  content: '';
+  position: absolute;
+  background-image: url(../img/bg1.jpg);
+  width: 100%;
+  height: 722px;
+  top: 0;
+  z-index: -1;
+}
+
+.main .top__slider-wrapper {
+  overflow-x: hidden;
+}
+
+.main .top__slider-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main .top__slider-img {
+  margin-left: -13%;
+  max-width: 703px;
+  height: 815px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.main .top__slider-info {
+  max-width: 645px;
+  margin-left: 25px;
+}
+
+.main .top__slider-title {
+  font-family: "Montserrat-Bold";
+  color: #363838;
+  font-size: 110px;
+  line-height: 134px;
+  padding-bottom: 26px;
+  margin-bottom: 26px;
+  position: relative;
+}
+
+.main .top__slider-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 185px;
+  height: 1px;
+  background: #6D7278;
+}
+
+.main .top__slider-text {
+  max-width: 585px;
+}
+
+.main .new-collection {
+  text-align: center;
+  padding: 45px 0 105px;
+}
+
+.main .new-collection__title {
+  color: #363838;
+  font-family: "Montserrat-Bold";
+  font-size: 36px;
+  line-height: 51px;
+  padding-bottom: 25px;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.main .new-collection__title::after {
+  content: '';
+  position: absolute;
+  width: 250px;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  background: #6D7278;
+}
+
+.main .new-collection__text {
+  max-width: 730px;
+  margin: 0 auto 30px;
+}
+
+.main .collection {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[5];
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 30px;
+}
+
+.main .collection__item {
+  position: relative;
+}
+
+.main .collection__item:hover .collection__info {
+  opacity: 1;
+}
+
+.main .collection__image {
+  min-height: 350px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.main .collection__info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  opacity: 0;
+  -webkit-transition: all .6s;
+  -o-transition: all .6s;
+  transition: all .6s;
+}
+
+.main .collection__info-title {
+  font-family: "Montserrat-Bold";
+  font-size: 20px;
+  line-height: 25px;
+  color: #363838;
+  padding-bottom: 19px;
+  margin-bottom: 19px;
+  position: relative;
+}
+
+.main .collection__info-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  height: 1px;
+  background: #6D7278;
+  max-width: 90%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.main .collection__info-text {
+  color: #707070;
+  font-family: "OpenSans-SemiBold";
+}
+
+.main .decor {
+  padding: 170px 0 155px;
+  background-image: url(../img/bg21.jpg);
+  background-size: cover;
+  -webkit-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
+}
+
+.main .decor__title {
+  font-family: "Montserrat-Bold";
+  color: #363838;
+  font-size: 60px;
+  line-height: 80px;
+  max-width: 740px;
+  padding-bottom: 22px;
+  margin-bottom: 22px;
+  position: relative;
+}
+
+.main .decor__title::after {
+  content: '';
+  position: absolute;
+  width: 40%;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  background: #6D7278;
+}
+
+.main .decor__text {
+  max-width: 540px;
 }
 
 .footer__content {
@@ -459,3 +686,43 @@ body {
   margin: 0 auto;
   padding: 0 15px;
 }
+
+.conteiner-fluid {
+  max-width: 1920px;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+.slick-dots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.slick-dots li {
+  padding: 0 15px;
+}
+
+.slick-dots button {
+  font-size: 0;
+  padding: 0;
+  background-color: #363838;
+  border: none;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.slick-dots li.slick-active button {
+  background-color: #ffef35;
+}
+
+.webp .main .top__inner::after { background-image: url(../img/bg1.webp); }
+
+.webp .main .decor { background-image: url(../img/bg21.webp); }
