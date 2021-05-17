@@ -129,6 +129,9 @@ h6 {
 }
 
 .menu__list-link,
+.main .works-path__title,
+.main .blog-box__title,
+.main .blog-box__item-title,
 .footer__info-title {
   font-family: "Montserrat-Bold", sans-serif;
   font-weight: 700;
@@ -428,7 +431,7 @@ h6 {
 
 .main .decor {
   padding: 170px 0 155px;
-  background-image: url(../img/bg21.jpg);
+  background-image: url(../img/bg2.jpg);
   background-size: cover;
   -webkit-transition: all .5s;
   -o-transition: all .5s;
@@ -458,6 +461,206 @@ h6 {
 
 .main .decor__text {
   max-width: 540px;
+}
+
+.main .works-path {
+  padding: 80px 0 30px;
+}
+
+.main .works-path__title {
+  text-align: center;
+  color: #363838;
+  margin-bottom: 40px;
+  font-size: 36px;
+  line-height: 51px;
+}
+
+.main .works-path__items-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  border-bottom: 2px solid rgba(54, 56, 56, 0.7);
+  position: relative;
+}
+
+.main .works-path__items-box::before {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  bottom: -5px;
+  left: 0;
+  background-color: #363838;
+}
+
+.main .works-path__item {
+  width: 250px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: relative;
+  height: 100%;
+}
+
+.main .works-path__item--productions {
+  margin-left: 317px;
+}
+
+.main .works-path__item--productions::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 2px;
+  height: 20px;
+  background: #363838;
+}
+
+.main .works-path__item--productions,
+.main .works-path__item--consultation {
+  padding-bottom: 38px;
+}
+
+.main .works-path__item--measurements {
+  padding-top: 38px;
+  margin-left: 305px;
+}
+
+.main .works-path__item--measurements::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 20px;
+  background: #363838;
+}
+
+.main .works-path__item-title {
+  margin-left: 13px;
+  font-family: "Montserrat-Bold";
+  color: #363838;
+  line-height: 23px;
+}
+
+.main .works-path__item-text {
+  margin-top: 13px;
+}
+
+.main .gallery {
+  padding: 80px 0 90px;
+}
+
+.main .gallery__buttons {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.main .gallery__btn {
+  margin: 0 13px;
+  background-color: transparent;
+  border: 1px solid #454647;
+  border-radius: 20px;
+  padding: 6px 16px;
+  color: #8F8D8D;
+  font-size: 14px;
+  font-family: "OpenSans-SemiBold";
+  cursor: pointer;
+}
+
+.main .gallery .mixitup-control-active {
+  background-color: #FFEF35;
+  color: #363838;
+  border: 1px solid #FFEF35;
+}
+
+.main .gallery__items {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+  grid-template-columns: repeat(4, 1fr);
+  -ms-grid-rows: (1fr)[2];
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 30px 35px;
+}
+
+.main .gallery__item:first-child {
+  -ms-grid-column-span: 2;
+  grid-column: span 2;
+  -ms-grid-row-span: 2;
+  grid-row: span 2;
+}
+
+.main .gallery__item-image {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  max-height: 100%;
+  height: 100%;
+}
+
+.main .blog-box {
+  padding-bottom: 100px;
+}
+
+.main .blog-box__title {
+  color: #363838;
+  font-size: 36px;
+  line-height: 51px;
+  margin: 0 auto 30px;
+  text-align: center;
+  max-width: 430px;
+}
+
+.main .blog-box__items {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 30px;
+}
+
+.main .blog-box__img-link {
+  margin-bottom: 19px;
+  display: inline-block;
+}
+
+.main .blog-box__links {
+  margin-bottom: 9px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #707070;
+}
+
+.main .blog-box__date {
+  color: inherit;
+}
+
+.main .blog-box__author {
+  color: inherit;
+}
+
+.main .blog-box__theme {
+  color: inherit;
+}
+
+.main .blog-box__item-title {
+  color: #363838;
+  font-size: 24px;
+  line-height: 38px;
 }
 
 .footer__content {
@@ -725,4 +928,4 @@ body {
 
 .webp .main .top__inner::after { background-image: url(../img/bg1.webp); }
 
-.webp .main .decor { background-image: url(../img/bg21.webp); }
+.webp .main .decor { background-image: url(../img/bg2.webp); }
